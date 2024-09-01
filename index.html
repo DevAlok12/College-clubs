@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        #title{
+            font: bold;
+            color: black;
+            margin: 0;
+        }
+        header{
+            background-color: bisque;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 7px;
+            margin: 3px;
+            border-radius: 5px;
+        }
+        #search
+        {
+            margin-left: auto;
+        }
+        body{
+            background-color: rgb(203, 199, 192);
+        }
+        nav {
+            display: flex;
+            justify-content: right;
+            background: #444;
+            height: 16px;
+            padding: 0.5em 0;
+            border-radius: 16px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 3px 12px;
+        }
+        nav a:hover {
+            background: #555;
+            height: 15px;
+            padding: 0.3px 0.1px;
+        }
+        .chat{
+            border: 2px solid black;
+            background-color: rgb(244, 244, 241);
+            width: 70px;
+            height: 70px;
+            border-radius: 8px;
+            position: fixed;
+            bottom: 1px;
+            right: 1px;
+            
+        }
+        footer{
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+            background: #444;
+            height: 130px;
+            padding: 0.8em 12em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img width="80" height="50" src="project1.png" alt="error404">
+        <h3 id="title">HITK Campus Connect</h3>
+        <input type="name" name="search" id="search" placeholder="Search...">  
+    </header>
+    <NAV>
+        <a href="#about">ABOUT</a>
+        <a href="#gallery">GALLERY</a>
+        <a href="clubs">CLUBS</a>
+        <a href="./project1.html" target="_blank">CLUB FORMS</a>
+        <a href="#contacts">CONTACT</a>
+    </NAV>
+    <section id="about">
+        <h2>About</h2>
+        <div>
+            This page is about the different clubs of Heritage Institute of Technology and their curriculum.
+        </div>
+    </section>
+    <section id="gallery">
+        <h2>Gallery</h2>
+    </section>
+    <section id="contacts">
+        <h2>Contacts</h2>
+        <button type="button">Contact us</button>
+        <br>
+        Instagram page:<a href="http://instagram.com/alok_kr_gupta/" target="_blank">Instagram</a>
+        <div class="chat">
+            Ask us
+        </div>
+    </section>
+    <footer>
+        <div>
+            Heritage Institute of Technology, popularly known as HITK or HIT is a self-financed institute in the state of the West Bengal. It is affiliated with Maulana Abul Kalam Azad University of Technology Kolkata.
+        </div>
+        <hr>
+        <div>
+            &copy; 2024 HITK Campus Connect. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>
