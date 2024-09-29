@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clubs - HITK Campus Connect</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Arial', sans-serif; /* Default font */
+            background-image: url('project1.png'); /* Background image */
+            background-size: 25%; /* Adjusted to make the image smaller */
+            background-repeat: no-repeat; /* Prevents the background image from repeating */
+            background-position: center; /* Centers the background image */
+            line-height: 1.6;
+            padding: 10px;
+            color: white; /* Default text color */
+        }
+        header {
+            background-color: rgba(255, 228, 196, 0.8); /* Light background with transparency */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        #title {
+            font-weight: bold;
+            font-size: 28px;
+            color: black;
+            margin-left: 10px;
+        }
+        #search {
+            width: 200px;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        section {
+            margin-bottom: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            background-color: rgba(50, 50, 50, 0.8); /* Darker background for better contrast */
+            transition: transform 0.3s ease;
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Space between title and icon */
+            align-items: center; /* Center items vertically */
+            height: 190px; /* Increased height */
+        }
+        section:hover {
+            transform: scale(1.02);
+            border-color: #888;
+        }
+        h2 {
+            font-size: 26px; /* Increased font size */
+            margin-bottom: 10px;
+            color: white; /* Ensure text is visible */
+            font-family: 'Georgia', serif; /* Changed font style */
+        }
+        .club-icon {
+            width: 160px; /* Increased icon width */
+            height: 168px; /* Increased icon height */
+            border: 2px solid #444;
+            border-radius: 80px; /* Increased border radius for a softer look */
+            transition: transform 0.3s ease;
+            object-fit: cover; /* Ensures the icon fills the area */
+        }
+        .club-icon:hover {
+            transform: scale(1.1);
+        }
+        footer {
+            background-color: rgba(34, 34, 34, 0.9); /* Dark footer background with different color */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        footer hr {
+            margin: 10px 0;
+            border: none;
+            border-top: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img width="80" height="50" src="project1.png" alt="HITK Campus Logo">
+        <h1 id="title">HITK Campus Connect - Clubs</h1>
+        <input type="search" id="search" placeholder="Search clubs...">
+    </header>
+    
+    <section onclick="window.location.href='resonance.html'">
+        <h2>Resonance</h2>
+        <img class="club-icon" src="resonancelogo.jpg" alt="Resonance Icon">
+    </section>
+    <section onclick="window.location.href='ghungroo.html'">
+        <h2>Ghungroo</h2>
+        <img class="club-icon" src="ghungroo-icon.png" alt="Ghungroo Icon">
+    </section>
+    <section onclick="window.location.href='anubhav.html'">
+        <h2>Anubhav</h2>
+        <img class="club-icon" src="anubhav-icon.png" alt="Anubhav Icon">
+    </section>
+    <section onclick="window.location.href='pravasana.html'">
+        <h2>Pravasana</h2>
+        <img class="club-icon" src="pravasana-icon.png" alt="Pravasana Icon">
+    </section>
+    <section onclick="window.location.href='sports.html'">
+        <h2>Sports</h2>
+        <img class="club-icon" src="sports-icon.png" alt="Sports Icon">
+    </section>
+    <section onclick="window.location.href='hfc.html'">
+        <h2>HFC</h2>
+        <img class="club-icon" src="hfc-icon.png" alt="HFC Icon">
+    </section>
+    <section onclick="window.location.href='atmadweep.html'">
+        <h2>Atmadweep</h2>
+        <img class="club-icon" src="atmadweep-icon.png" alt="Atmadweep Icon">
+    </section>
+    <section onclick="window.location.href='gdsc.html'">
+        <h2>GDSC</h2>
+        <img class="club-icon" src="gdsc-icon.png" alt="GDSC Icon">
+    </section>
+    <section onclick="window.location.href='nss-hitk.html'">
+        <h2>NSS HITK</h2>
+        <img class="club-icon" src="nss-hitk-icon.png" alt="NSS HITK Icon">
+    </section>
+    <section onclick="window.location.href='yoga.html'">
+        <h2>Yoga</h2>
+        <img class="club-icon" src="yoga-icon.png" alt="Yoga Icon">
+    </section>
+
+    <footer>
+        <div>
+            Heritage Institute of Technology, popularly known as HITK or HIT is a self-financed institute in the state of West Bengal. It is affiliated with Maulana Abul Kalam Azad University of Technology Kolkata.
+        </div>
+        <hr>
+        <div>
+            &copy; 2024 HITK Campus Connect. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>
