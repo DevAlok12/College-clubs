@@ -75,8 +75,6 @@
             border: none;
             border-top: 1px solid white;
         }
-
-        /* Gallery Grid */
         .gallery-container {
             display: flex;
             flex-wrap: wrap;
@@ -93,32 +91,30 @@
             transition: transform 0.3s;
         }
         .gallery-img:hover {
-            transform: scale(1.05); /* Slight zoom effect on hover */
+            transform: scale(1.05); 
         }
 
-        /* See More Button (formerly Load More) */
         .see-more-btn {
-            background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient effect */
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
             color: white;
             border: none;
             padding: 12px 30px;
             font-size: 18px;
             font-weight: bold;
             cursor: pointer;
-            border-radius: 50px; /* Makes the button pill-shaped */
+            border-radius: 50px; 
             transition: all 0.3s ease;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-            margin-left: 20px; /* Space between the last image and the button */
-            align-self: center; /* Center the button vertically */
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+            margin-left: 20px; 
+            align-self: center; 
         }
 
         .see-more-btn:hover {
-            background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Reverse gradient on hover */
-            transform: translateY(-3px); /* Slight "lift" effect */
-            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25); /* Increased shadow on hover */
+            background: linear-gradient(135deg, #feb47b, #ff7e5f); 
+            transform: translateY(-3px); 
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
         }
 
-        /* Lightbox (Modal) Styles */
         .modal {
             display: none;
             position: fixed;
@@ -152,7 +148,6 @@
             cursor: pointer;
         }
 
-        /* Responsive design */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -195,14 +190,12 @@
     <section id="gallery">
         <h2>Gallery</h2>
         <div id="gallery-container" class="gallery-container">
-            <!-- Images will be dynamically loaded here -->
         </div>
         <div id="see-more-container" style="display: flex; align-items: center;">
             <button id="see-more-btn" class="see-more-btn">See More</button>
         </div>
     </section>
 
-    <!-- Modal Lightbox for Enlarged Images -->
     <div id="lightbox-modal" class="modal">
         <span class="modal-close" id="modal-close">&times;</span>
         <div class="modal-content">
@@ -240,7 +233,6 @@
         let currentIndex = 0;
         const batchSize = 10;
 
-        // Function to load images
         function loadImages() {
             let end = currentIndex + batchSize;
             for (let i = currentIndex; i < end && i < images.length; i++) {
@@ -257,24 +249,23 @@
             }
             currentIndex = end;
 
-            // Hide the See More button if all images are loaded
+
             if (currentIndex >= images.length) {
                 seeMoreBtn.style.display = 'none';
             }
         }
 
-        // Load initial images
+
         loadImages();
 
-        // Load more images when button is clicked
+
         seeMoreBtn.addEventListener('click', loadImages);
 
-        // Close the modal when the close button is clicked
+
         closeModal.addEventListener('click', function() {
             modal.style.display = 'none';
         });
 
-        // Close the modal if the user clicks outside the image
         window.onclick = function(event) {
             if (event.target === modal) {
                 modal.style.display = 'none';
@@ -283,4 +274,3 @@
     </script>
 </body>
 </html>
-
