@@ -3,23 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Myproject</title>
+    <title>Login - HITK Campus Connect</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('project1.png'); 
+            background-size: 30%; 
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #fff; 
         }
         header {
-            background: #333;
-            color: #fff;
-            padding: 1em 0;
-            text-align: center;
+            background-color: rgba(255, 228, 196, 0.8); 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
         }
-        header h1 {
-            margin: 0;
+        #title {
+            font-weight: bold;
+            font-size: 28px;
+            color: black;
+            margin-left: 10px;
         }
         nav {
             display: flex;
@@ -40,7 +52,7 @@
             padding: 2em;
             max-width: 800px;
             margin: 0 auto;
-            background: #fff;
+            background: rgba(50, 50, 50, 0.8); 
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             margin-bottom: 2em;
@@ -52,7 +64,7 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
-        .about-form button {
+        .about-form button, .projects-form button, .contacts-form button {
             background: #333;
             color: #fff;
             border: none;
@@ -60,56 +72,28 @@
             border-radius: 4px;
             cursor: pointer;
         }
-        .about-form button:hover {
-            background: #555;
-        }
-        .projects-form input, .projects-form textarea {
-            width: 100%;
-            padding: 0.5em;
-            margin: 0.5em 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .projects-form button {
-            background: #333;
-            color: #fff;
-            border: none;
-            padding: 0.75em 1.5em;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .projects-form button:hover {
-            background: #555;
-        }
-        .contacts-form input, .contacts-form textarea {
-            width: 100%;
-            padding: 0.5em;
-            margin: 0.5em 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .contacts-form button {
-            background: #333;
-            color: #fff;
-            border: none;
-            padding: 0.75em 1.5em;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .contacts-form button:hover {
+        .about-form button:hover, .projects-form button:hover, .contacts-form button:hover {
             background: #555;
         }
         footer {
+            background-color: rgba(34, 34, 34, 0.9); 
+            color: white;
             text-align: center;
-            padding: 1em;
-            background: #333;
-            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        footer hr {
+            margin: 10px 0;
+            border: none;
+            border-top: 1px solid white;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Login form</h1>
+        <img width="80" height="50" src="project1.png" alt="HITK Campus Logo">
+        <h1 id="title">HITK Campus Connect - Login</h1>
     </header>
     <nav>
         <a href="#about">About</a>
@@ -153,7 +137,8 @@
             <button type="submit">Submit now</button>
         </form>
     </section>
-   <footer>
+
+    <footer>
         <div>
             Heritage Institute of Technology, popularly known as HITK or HIT is a self-financed institute in the state of West Bengal. It is affiliated with Maulana Abul Kalam Azad University of Technology Kolkata.
         </div>
@@ -161,6 +146,6 @@
         <div>
             &copy; 2024 HITK Campus Connect. All Rights Reserved.
         </div>
-   </footer> 
+    </footer>
 </body>
 </html>
