@@ -18,7 +18,7 @@
             background-position: center; 
             line-height: 1.6;
             padding: 10px;
-            color: white;
+            background-color: rgb(203, 199, 192);
         }
         header {
             background-color: rgba(255, 228, 196, 0.8); 
@@ -28,15 +28,17 @@
             padding: 15px;
             border-radius: 5px;
             margin-bottom: 10px;
+            flex-wrap: wrap; 
         }
         #title {
             font-weight: bold;
-            font-size: 28px;
+            font-size: 36px;
             color: black;
             margin-left: 10px;
+            font-family: 'Georgia', serif;
         }
         #search {
-            width: 200px;
+            width: 320px;
             padding: 5px;
             border-radius: 4px;
             border: 1px solid #ccc;
@@ -81,6 +83,67 @@
             border: none;
             border-top: 1px solid white;
         }
+
+        @media screen and (max-width: 1024px) {
+            body {
+                background-size: 40%; 
+            }
+            header {
+                padding: 10px;
+            }
+            #title {
+                font-size: 32px; 
+            }
+            #search {
+                width: 280px; 
+        }
+    }
+
+        @media screen and (max-width: 768px) {
+            body {
+                background-size: 50%; 
+            }
+            #title {
+                font-size: 28px; 
+                margin-left: 0; 
+                text-align: center;
+            }
+            #search {
+                width: 240px;
+                margin-top: 10px;
+            }
+            header {
+                flex-direction: column; 
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 5px;
+                background-size: 70%; 
+            }
+            header {
+                padding: 8px;
+            }
+            #title {
+                font-size: 24px; 
+            }
+            #search {
+                width: 100%; 
+            }
+            .content {
+                padding: 10px;
+                font-size: 16px; 
+            }
+            h2 {
+                font-size: 22px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -92,7 +155,7 @@
     
     <div class="content">
         <h2>Welcome to Resonance</h2>
-        <p>Resonance is a vibrant music club dedicated to promoting the art of music and performing arts. We organize various events, workshops, and performances that allow students to express their creativity and passion for music.</p>
+        <p>Resonance is a music club dedicated to promoting the art of music and performing arts. We organize various events, workshops, and performances that allow students to express their creativity and passion for music.</p>
         <p>Join us to experience the joy of music, collaborate with fellow enthusiasts, and be part of an inspiring community!</p>
         <p>For more details about our events, you can contact us on our <a href="http://instagram.com/resonancehitk/" target="_blank">Instagram page</a>.</p>
     </div>
