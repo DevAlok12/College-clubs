@@ -31,12 +31,13 @@
         }
         #title {
             font-weight: bold;
-            font-size: 28px;
+            font-size: 36px;
             color: black;
-            margin-left: 10px;
+            margin-left: -550px;
+            font-family: 'Georgia', serif;
         }
         #search {
-            width: 200px;
+            width: 320px;
             padding: 5px;
             border-radius: 4px;
             border: 1px solid #ccc;
@@ -87,6 +88,49 @@
             border: none;
             border-top: 1px solid white;
         }
+
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            #title {
+                margin-left: 0;
+                font-size: 28px;
+            }
+            #search {
+                width: 100%;
+                margin-top: 10px;
+            }
+            section {
+                flex-direction: column;
+                height: auto;
+                text-align: center;
+                padding: 15px;
+            }
+            h2 {
+                font-size: 22px;
+            }
+            .club-icon {
+                width: 120px;
+                height: 130px;
+                margin-bottom: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #title {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            .club-icon {
+                width: 100px;
+                height: 110px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -102,39 +146,39 @@
     </section>
     <section onclick="window.location.href='ghungroo.html'">
         <h2>Ghungroo</h2>
-        <img class="club-icon" src="ghungroo-icon.png" alt="Ghungroo Icon">
+        <img class="club-icon" src="ghungroo_logo.jpg" alt="Ghungroo Icon">
     </section>
     <section onclick="window.location.href='anubhav.html'">
         <h2>Anubhav</h2>
-        <img class="club-icon" src="anubhav-icon.png" alt="Anubhav Icon">
+        <img class="club-icon" src="anubhav_logo.jpg" alt="Anubhav Icon">
     </section>
     <section onclick="window.location.href='pravasana.html'">
         <h2>Pravasana</h2>
-        <img class="club-icon" src="pravasana-icon.png" alt="Pravasana Icon">
+        <img class="club-icon" src="pravasana_logo.png" alt="Pravasana Icon" style="object-fit: cover; object-position: center -29px;">
     </section>
     <section onclick="window.location.href='sports.html'">
         <h2>Sports</h2>
-        <img class="club-icon" src="sports-icon.png" alt="Sports Icon">
+        <img class="club-icon" src="sports_logo.png" alt="Sports Icon">
     </section>
     <section onclick="window.location.href='hfc.html'">
         <h2>HFC</h2>
-        <img class="club-icon" src="hfc-icon.png" alt="HFC Icon">
+        <img class="club-icon" src="hfc_logo.png" alt="HFC Icon">
     </section>
-    <section onclick="window.location.href='atmadweep.html'">
-        <h2>Atmadweep</h2>
-        <img class="club-icon" src="atmadweep-icon.png" alt="Atmadweep Icon">
+    <section onclick="window.location.href='anahita.html'">
+        <h2>Anahita</h2>
+        <img class="club-icon" src="anahita_logo.png" alt="Anahita Icon">
     </section>
     <section onclick="window.location.href='gdsc.html'">
         <h2>GDSC</h2>
-        <img class="club-icon" src="gdsc-icon.png" alt="GDSC Icon">
+        <img class="club-icon" src="gdsc_logo.png" alt="GDSC Icon">
     </section>
-    <section onclick="window.location.href='nss-hitk.html'">
+    <section onclick="window.location.href='nss.html'">
         <h2>NSS HITK</h2>
-        <img class="club-icon" src="nss-hitk-icon.png" alt="NSS HITK Icon">
+        <img class="club-icon" src="nss_logo.png" alt="NSS HITK Icon">
     </section>
-    <section onclick="window.location.href='yoga.html'">
-        <h2>Yoga</h2>
-        <img class="club-icon" src="yoga-icon.png" alt="Yoga Icon">
+    <section onclick="window.location.href='geeks.html'">
+        <h2>Geeks United</h2>
+        <img class="club-icon" src="geeks_logo.png" alt="Geeks Icon">
     </section>
 
     <footer>
