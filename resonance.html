@@ -24,17 +24,19 @@
             background-color: rgba(255, 228, 196, 0.8); 
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-start; /* Align items to the start */
             padding: 15px;
             border-radius: 5px;
             margin-bottom: 10px;
             flex-wrap: wrap; 
         }
+        header img {
+            margin-right: 10px; /* Space between logo and title */
+        }
         #title {
             font-weight: bold;
             font-size: 36px;
             color: black;
-            margin-left: 10px;
             font-family: 'Georgia', serif;
         }
         #search {
@@ -96,8 +98,8 @@
             }
             #search {
                 width: 280px; 
+            }
         }
-    }
 
         @media screen and (max-width: 768px) {
             body {
@@ -105,8 +107,6 @@
             }
             #title {
                 font-size: 28px; 
-                margin-left: 0; 
-                text-align: center;
             }
             #search {
                 width: 240px;
@@ -116,6 +116,10 @@
                 flex-direction: column; 
                 align-items: center;
                 text-align: center;
+            }
+            header img {
+                margin-right: 0; /* Reset space between logo and title */
+                margin-bottom: 10px; /* Add some margin to separate logo from title */
             }
         }
 
@@ -150,7 +154,7 @@
     <header>
         <img width="80" height="50" src="project1.png" alt="HITK Campus Logo">
         <h1 id="title">HITK Campus Connect - Resonance</h1>
-        <input type="search" id="search" placeholder="Search clubs...">
+        <!-- <input type="search" id="search" placeholder="Search clubs..."> -->
     </header>
     
     <div class="content">
