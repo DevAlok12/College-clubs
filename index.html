@@ -56,20 +56,26 @@
             background-color: #555;
             outline: none;
         }
-        
         .about-text {
             font-family: 'Roboto', sans-serif;
             font-size: 18px;
             color: #333;
             line-height: 1.6;
         }
+        .login-text{
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            font-style: italic;
+        }
         section {
             margin-top: 40px;
         }
-
         h2 {
             font-size: 28px;
             margin-bottom: 10px;
+            font-family: 'Georgia', serif;
         }
         footer {
             background-color: #444;
@@ -88,10 +94,8 @@
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-        
             margin-top: 20px;
         }
-
         .gallery-img {
             width: 300px;
             height: 300px;
@@ -103,7 +107,6 @@
         .gallery-img:hover {
             transform: scale(1.05); 
         }
-
         .see-more-btn {
             background: linear-gradient(135deg, #ff7e5f, #feb47b);
             color: white;
@@ -115,22 +118,21 @@
             border-radius: 50px; 
             transition: all 0.3s ease;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
-            margin-left: 20px; 
+            margin-left: 3px; 
             align-self: center; 
+            margin-top: 15px;
         }
-
         .see-more-btn:hover {
             background: linear-gradient(135deg, #feb47b, #ff7e5f); 
             transform: translateY(-3px); 
             box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
         }
         .social-logo {
-            width: 30px; 
-            height: 30px; 
+            width: 35px; 
+            height: 35px; 
             margin-right: 10px; 
             transition: transform 0.3s ease; 
         }
-
         .social-logo:hover {
             transform: scale(1.1);
         }
@@ -146,7 +148,6 @@
             justify-content: center;
             align-items: center;
         }
-
         .modal-content {
             max-width: 90%;
             max-height: 90%;
@@ -154,15 +155,13 @@
             justify-content: center;
             align-items: center;
         }
-
         .modal img {
-            max-width: 100%;
-            max-height: 100%;
+            max-width: 90%;
+            max-height: 90%;
             width: auto;
             height: auto;
             border-radius: 10px;
         }
-
         .modal-close {
             position: absolute;
             top: 20px;
@@ -171,7 +170,6 @@
             color: white;
             cursor: pointer;
         }
-
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -191,6 +189,12 @@
                 padding: 15px 0;
             }
         }
+        @media (min-width: 768px) {
+            .modal-content img {
+                max-width: 60%;
+                max-height: 80%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -201,14 +205,17 @@
         <input type="search" name="search" id="search" placeholder="Search...">
     </header>
     <nav>
-        <a href="#about">ABOUT</a>
-        <a href="#gallery">GALLERY</a>
-        <a href="./club.html" target="_blank">CLUBS</a>
-        <a href="./project1.html" target="_blank">LOGIN</a>
-        <a href="#contacts">CONTACT</a>
+        <a href="#about" data-title="about">ABOUT</a>
+        <a href="#gallery" data-title="gallery">GALLERY</a>
+        <a href="./club.html" target="_blank" data-title="clubs">CLUBS</a>
+        <a href="./project1.html" target="_blank" data-title="login">LOGIN</a>
+        <a href="#contacts" data-title="know more">KNOW MORE</a>
     </nav>
+
+    
+    
     <section id="about">
-        <h2>About</h2>
+        <h2>Welcome to Campus Connect</h2>
         <div class="about-text">
             <p>Heritage Institute of Technology (HITK) is a premier engineering institute located in West Bengal. Established in 2001, it has quickly become a hub for aspiring engineers, offering a diverse range of undergraduate and postgraduate programs.</p>
             <p>The institute hosts various clubs and organizations that cater to students' interests, ranging from cultural and technical clubs to sports and social service. Each club provides students with a platform to develop their skills, engage with peers, and contribute to the vibrant campus culture.</p>
@@ -231,6 +238,28 @@
         </div>
     </div>
 
+    <section id="clubs"></section>
+        <h2>Clubs</h2>
+        <div class="login-text"></div>
+            <p>To know more about clubs :
+                <a href="./club.html" target="_blank" >
+                    <button id="see-more-btn" class="see-more-btn" >click here</button>
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <section id="login">
+        <h2>Login</h2>
+        <div class="login-text"></div>
+            <p>Sign up for a better experience :
+                <a href="./project1.html" target="_blank" >
+                    <button id="see-more-btn" class="see-more-btn" >Sign in</button>
+                </a>
+            </p>
+        </div>
+    </section>
+
     <section id="contacts">
         <h2>Contacts</h2>
         <a href="http://instagram.com/hitkbeats/" target="_blank">
@@ -239,7 +268,13 @@
         <a href="http://facebook.com/Heritageit" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo" class="social-logo">
         </a>
-    </section>
+        <a href="https://www.heritageit.edu/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/be/Heritage_Institute_of_Kolkata_Logo.png" alt="Website Logo" class="social-logo" > 
+        </a>
+        <a href="https://maps.app.goo.gl/iBwNuULzDeUidzwX6" target="_blank">
+            <img src="logo1.png" alt="Direction Logo" class="social-logo" > 
+        </a>
+    </section>  
     <footer>
         <div>
             Heritage Institute of Technology, popularly known as HITK or HIT is a self-financed institute in the state of West Bengal. It is affiliated with Maulana Abul Kalam Azad University of Technology Kolkata.
@@ -257,51 +292,106 @@
         const modalImg = document.getElementById('lightbox-img');
         const closeModal = document.getElementById('modal-close');
 
-        let images = [
-            "gallery1.jpg","resonance2.jpg","resonance3.jpg","ghungroo3.jpg","gallery1.jpg","resonance2.jpg","resonance3.jpg","ghungroo3.jpg","gallery1.jpg","resonance2.jpg","resonance3.jpg","ghungroo3.jpg","gallery1.jpg","resonance2.jpg","resonance3.jpg","ghungroo3.jpg","gallery1.jpg","resonance2.jpg","resonance3.jpg","ghungroo3.jpg","gallery1.jpg","resonance2.jpg","resonance3.jpg","ghungroo3.jpg","gallery1.jpg","resonance2.jpg","resonance3.jpg","ghungroo3.jpg","gallery1.jpg","resonance2.jpg","resonance3.jpg","ghungroo3.jpg","gallery1.jpg","resonance2.jpg","resonance3.jpg","ghungroo3.jpg","gallery1.jpg","resonance2.jpg","resonance3.jpg","ghungroo3.jpg","gallery1.jpg","resonance2.jpg","resonance3.jpg","ghungroo3.jpg","gallery1.jpg","resonance2.jpg","resonance3.jpg","ghungroo3.jpg","gallery1.jpg","resonance2.jpg","resonance3.jpg","ghungroo3.jpg","gallery1.jpg","resonance2.jpg","resonance3.jpg","ghungroo3.jpg","gallery1.jpg","resonance2.jpg","resonance3.jpg","ghungroo3.jpg","gallery1.jpg","resonance2.jpg","resonance3.jpg","ghungroo3.jpg",
+        let photosToShow = 5;
+        const photos = [
+            'gallery1.jpg',
+            'ghungroo1.jpg',
+            'ghungroo2.jpg',
+            'resonance2.jpg',
+            'resonance3.jpg',
+            'gallery1.jpg',
+            'ghungroo1.jpg',
+            'ghungroo2.jpg',
+            'resonance2.jpg',
+            'resonance3.jpg',
+            'gallery1.jpg',
+            'ghungroo1.jpg',
+            'ghungroo2.jpg',
+            'resonance2.jpg',
+            'resonance3.jpg',
+            'gallery1.jpg',
+            'ghungroo1.jpg',
+            'ghungroo2.jpg',
+            'resonance2.jpg',
+            'resonance3.jpg',
+            'gallery1.jpg',
+            'ghungroo1.jpg',
+            'ghungroo2.jpg',
+            'resonance2.jpg',
+            'resonance3.jpg',
+            'gallery1.jpg',
+            'ghungroo1.jpg',
+            'ghungroo2.jpg',
+            'resonance2.jpg',
+            'resonance3.jpg'
         ];
 
-        let currentIndex = 0;
-        const batchSize = 5;
-
-        function loadImages() {
-            let end = currentIndex + batchSize;
-            for (let i = currentIndex; i < end && i < images.length; i++) {
-                const img = document.createElement('img');
-                img.src = images[i];
-                img.alt = `Gallery Image ${i + 1}`;
-                img.classList.add('gallery-img');
-                img.loading = 'lazy';
-                img.addEventListener('click', function() {
-                    modal.style.display = 'flex';
-                    modalImg.src = this.src;
-                });
-                galleryContainer.appendChild(img);
+        function renderGallery() {
+            galleryContainer.innerHTML = '';
+            for (let i = 0; i < photosToShow; i++) {
+                if (i < photos.length) {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = photos[i];
+                    imgElement.alt = `Image ${i + 1}`;
+                    imgElement.classList.add('gallery-img');
+                    imgElement.addEventListener('click', () => {
+                        modal.style.display = 'flex';
+                        modalImg.src = photos[i];
+                    });
+                    galleryContainer.appendChild(imgElement);
+                }
             }
-            currentIndex = end;
 
-
-            if (currentIndex >= images.length) {
+            if (photosToShow >= photos.length) {
                 seeMoreBtn.style.display = 'none';
             }
         }
 
+        seeMoreBtn.addEventListener('click', () => {
+            photosToShow +=     5;
+            renderGallery();
+        });
 
-        loadImages();
-
-
-        seeMoreBtn.addEventListener('click', loadImages);
-
-
-        closeModal.addEventListener('click', function() {
+        closeModal.addEventListener('click', () => {
             modal.style.display = 'none';
         });
 
-        window.onclick = function(event) {
-            if (event.target === modal) {
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
                 modal.style.display = 'none';
             }
-        };
+        });
+
+        renderGallery();
+
+        const searchInput = document.getElementById('search');
+    searchInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            const query = searchInput.value.toLowerCase();
+            const elements = document.querySelectorAll('section, nav, h2, p, a'); 
+            let found = false;
+
+            elements.forEach(element => {
+                if (element.innerText.toLowerCase().includes(query)) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                    found = true;
+                }
+            });
+
+            const images = document.querySelectorAll('.gallery-img');
+            images.forEach(image => {
+                if (image.alt.toLowerCase().includes(query)) {
+                    image.scrollIntoView({ behavior: 'smooth' });
+                    found = true;
+                }
+            });
+
+            if (!found) {
+                alert('No matching content found.');
+            }
+        }
+    });
+
     </script>
 </body>
 </html>
