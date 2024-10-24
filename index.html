@@ -365,32 +365,45 @@
         renderGallery();
 
         const searchInput = document.getElementById('search');
-    searchInput.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-            const query = searchInput.value.toLowerCase();
-            const elements = document.querySelectorAll('section, nav, h2, p, a'); 
-            let found = false;
+        searchInput.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                const query = searchInput.value.toLowerCase().trim();
+                let found = false;
 
-            elements.forEach(element => {
-                if (element.innerText.toLowerCase().includes(query)) {
-                    element.scrollIntoView({ behavior: 'smooth' });
+                if (query === 'clubs') {
+                    window.location.href = './club.html';
                     found = true;
-                }
-            });
-
-            const images = document.querySelectorAll('.gallery-img');
-            images.forEach(image => {
-                if (image.alt.toLowerCase().includes(query)) {
-                    image.scrollIntoView({ behavior: 'smooth' });
+                } else if (query === 'login') {
+                    window.location.href = './project1.html'; 
                     found = true;
-                }
-            });
+                } else {
+                
+                    const elements = document.querySelectorAll('section, nav a, h2, p');
+                    elements.forEach(element => {
+                        if (element.innerText.toLowerCase().includes(query)) {
+                            element.scrollIntoView({ behavior: 'smooth' });
+                            found = true;
+                        }
+                    });
 
-            if (!found) {
-                alert('No matching content found.');
+       
+                    const images = document.querySelectorAll('.gallery-img');
+                    images.forEach(image => {
+                        if (image.alt.toLowerCase().includes(query)) {
+                            image.scrollIntoView({ behavior: 'smooth' });
+                            found = true;
+                        }
+                    });
+                }
+
+
+                if (!found) {
+                    console.log('No matching content found');
+                }
             }
-        }
-    });
+        });
+
+
 
     </script>
 </body>
