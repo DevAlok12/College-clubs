@@ -137,46 +137,48 @@
     <header>
         <img width="80" height="50" src="project1.png" alt="HITK Campus Logo">
         <h1 id="title">HITK Campus Connect - Clubs</h1>
-        <input type="search" id="search" placeholder="Search clubs...">
+        <input type="search" id="search" placeholder="Search clubs..." onkeydown="searchClubs(event)">
+
+
     </header>
     
-    <section onclick="window.location.href='resonance.html'">
+    <section onclick="window.location.href='resonance.html'" data-keywords="music singing resonance">
         <h2>Resonance</h2>
         <img class="club-icon" src="reso_logo.jpg" alt="Resonance Icon">
     </section>
-    <section onclick="window.location.href='ghungroo.html'">
+    <section onclick="window.location.href='ghungroo.html'" data-keywords="dance ghungroo">
         <h2>Ghungroo</h2>
         <img class="club-icon" src="ghungroo_logo.jpg" alt="Ghungroo Icon">
     </section>
-    <section onclick="window.location.href='anubhav.html'">
+    <section onclick="window.location.href='anubhav.html'" data-keywords="drama acting anubhav">
         <h2>Anubhav</h2>
         <img class="club-icon" src="anubhav_logo.jpg" alt="Anubhav Icon">
     </section>
-    <section onclick="window.location.href='pravasana.html'">
+    <section onclick="window.location.href='pravasana.html'" data-keywords="painting drawing pravasana">
         <h2>Pravasana</h2>
         <img class="club-icon" src="pravasana_logo.png" alt="Pravasana Icon" style="object-fit: cover; object-position: center -29px;">
     </section>
-    <section onclick="window.location.href='sports.html'">
+    <section onclick="window.location.href='sports.html'" data-keywords="sports basketball  cricket archery football volleyball kabaddi athletics ">
         <h2>Sports</h2>
         <img class="club-icon" src="sports_logo.png" alt="Sports Icon">
     </section>
-    <section onclick="window.location.href='hfc.html'">
+    <section onclick="window.location.href='hfc.html'" data-keywords="fashion HFc walk">
         <h2>HFC</h2>
         <img class="club-icon" src="hfc_logo.png" alt="HFC Icon">
     </section>
-    <section onclick="window.location.href='anahita.html'">
+    <section onclick="window.location.href='anahita.html'" data-keywords="literature literary writing poetry anahita">
         <h2>Anahita</h2>
         <img class="club-icon" src="anahita_logo.png" alt="Anahita Icon">
     </section>
-    <section onclick="window.location.href='gdsc.html'">
+    <section onclick="window.location.href='gdsc.html'" data-keywords="gdsc coding ">
         <h2>GDSC</h2>
         <img class="club-icon" src="gdsc_logo.png" alt="GDSC Icon">
     </section>
-    <section onclick="window.location.href='nss.html'">
+    <section onclick="window.location.href='nss.html'" data-keywords="nss socialservice service social ">
         <h2>NSS HITK</h2>
         <img class="club-icon" src="nss_logo.png" alt="NSS HITK Icon">
     </section>
-    <section onclick="window.location.href='geeks.html'">
+    <section onclick="window.location.href='geeks.html'" >
         <h2>Geeks United</h2>
         <img class="club-icon" src="geeks_logo.png" alt="Geeks Icon">
     </section>
@@ -190,5 +192,30 @@
             &copy; 2024 HITK Campus Connect. All Rights Reserved.
         </div>
     </footer>
+
+    <script>
+        function searchClubs(event) {
+            if (event.keyCode === 13) {  
+                const searchQuery = document.getElementById('search').value.toLowerCase();
+                const sections = document.querySelectorAll('section');
+                let found = false;
+                
+                sections.forEach(section => {
+                    const keywords = section.getAttribute('data-keywords').toLowerCase();
+                    
+                    if (keywords.includes(searchQuery)) {
+                        section.scrollIntoView(); 
+                        section.click(); 
+                        found = true;
+                    }
+                });
+                
+                if (!found) {
+                    alert('No matching club found'); 
+                }
+            }
+        }
+    </script>
+    
 </body>
 </html>
