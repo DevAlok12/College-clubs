@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anubhav</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Arial', sans-serif; 
+            background-image: url('project1.png');
+            background-size: 25%; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            line-height: 1.6;
+            padding: 10px;
+            background-color: rgb(203, 199, 192);
+        }
+        header {
+            background-color: rgba(255, 228, 196, 0.8); 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            flex-wrap: wrap; 
+        }
+        header img {
+            margin-right: 10px;
+        }
+        #title {
+            font-weight: bold;
+            font-size: 36px;
+            color: black;
+            font-family: 'Georgia', serif;
+            text-align: center; 
+            flex: 1;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            background-color: #444; 
+            border-radius: 16px;
+            padding: 19px;
+            margin-bottom: 45px; 
+            height: 65px;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 115px; 
+            padding: 0; 
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: #fff; 
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            padding: 10px 20px;
+            border-radius: 5px; 
+        }
+        nav ul li a:hover, nav ul li a:focus {
+            background-color: #555; 
+            outline: none;
+        }
+        .content {
+            margin-bottom: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            background-color: rgba(50, 50, 50, 0.8); 
+        }
+        .about-container {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .about-text {
+            flex: 1; 
+            margin-right: 20px; 
+        }
+        .about-text a{
+            margin-left: 6px;
+            display: inline;
+            vertical-align: middle; 
+        }
+        .about-image {
+            width: 160px;
+            height: 190px; 
+            cursor: pointer;
+            border-radius: 100px;
+        }
+        h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: black;
+            font-family: 'Georgia', serif;
+        }
+        p {
+            font-size: 18px; 
+            color: white; 
+            margin: -2px 2px;
+        }
+        .event-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; 
+        }
+        .event-box {
+            background-color: rgba(255, 255, 255, 0.1); 
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center; 
+            color: white; 
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+            flex-direction: column; 
+        }
+
+        .event-box-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%; 
+        }
+
+        .event-box h3 {
+            margin-bottom: 10px;
+            font-size: 24px; 
+            color: #FFD700; 
+        }
+        .members-box {
+            background-color: rgba(255, 255, 255, 0.1); 
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center; 
+            color: white; 
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+            flex-direction: column; 
+            margin: 20px;
+        }
+
+        .members-box-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+        }
+
+        .members-box h3 {
+            margin-bottom: 10px;
+            font-size: 24px; 
+            color: #FFD700; 
+        }
+
+        .event-box img {
+            border-radius: 5px; 
+            cursor: pointer; 
+            margin-bottom: 10px; 
+        }
+
+        .see-more-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .social-logo {
+            width: 35px; 
+            height: 35px; 
+            margin-right: 10px; 
+            transition: transform 0.3s ease; 
+            margin-right: 10px;
+        }
+        .social-logo:hover {
+            transform: scale(1.1);
+        }
+
+        .event-box button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #FFD700; 
+            color: black;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .event-box button:hover {
+            background-color: #FFC107;
+        }
+
+        .additional-images {
+            display: none; 
+            margin-top: 35px;
+            padding: 10px;
+        }
+
+        .additional-images img{
+            margin: 25px;
+        }
+
+        .show-more, .see-more {
+            cursor: pointer;
+            background-color: #FFD700; 
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: black;
+            margin-top: 10px; 
+            display: block; 
+            font-weight: bold; 
+    font-size: 16px; 
+    color: #333;
+        }
+
+        .show-more{
+            border-radius: 20px;
+        }
+        .show-more:hover, .see-more:hover {
+            background-color: #f3d98d; 
+        }
+
+        .hidden {
+            display: none;
+        }
+        .members-container {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            margin-top: 20px;
+
+        }
+
+        .members-container img {
+            width: 600px; 
+            height: auto; 
+            border-radius: 12px; 
+            border: 2px solid #ccc; /* Optional: Add a border */
+            margin-bottom:20px ;
+        }
+
+        footer {
+            background-color: rgba(34, 34, 34, 0.9); 
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        footer hr {
+            margin: 10px 0;
+            border: none;
+            border-top: 1px solid white;
+        }
+        @media screen and (max-width: 1024px) {
+            body {
+                background-size: 40%; 
+            }
+            header {
+                padding: 10px;
+            }
+            #title {
+                font-size: 32px; 
+            }
+            nav ul {
+                gap: 45px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                background-size: 50%; 
+            }
+            header {
+                flex-direction: column; 
+                align-items: center;
+                text-align: center;
+            }
+            header img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            #title {
+                font-size: 28px; 
+            }
+            nav ul {
+                flex-direction: column; 
+                gap: 15px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 5px;
+                background-size: 100%; 
+            }
+            header {
+                padding: 8px;
+            }
+            #title {
+                font-size: 24px; 
+            }
+            .content {
+                padding: 10px;
+                font-size: 16px; 
+            }
+            h2 {
+                font-size: 22px;
+                white-space: nowrap;
+            }
+            p {
+                font-size: 20px;
+            }
+            .event-box-content p{
+                margin-top: 58px;
+            }
+            .nav-container {
+                height: 305px;
+                padding: 27px;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 28px;
+                text-align: center;
+            }
+            .about-image {
+                width: 70px; 
+                height: 150px; 
+                cursor: pointer; 
+                border-radius: 20px;
+            }
+            .event-box img {
+                width: 65px;
+            }
+            #im2{
+                width: 45px;
+            } 
+            #im1{
+                width: 60px;
+            }
+            .additional-images img{
+            margin: 25px;
+        }
+            .members-container img{
+                width: 360px;
+            }
+        }
+
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 100%; 
+            height: auto; 
+            max-width: 700px; 
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img width="80" height="50" src="project1.png" alt="HITK Campus Logo">
+        <h1 id="title">HITK Campus Connect - Anubhav</h1>
+    </header>
+
+    <div class="nav-container">
+        <nav>
+            <ul>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#events">EVENTS</a></li>
+                <li><a href="#members">MEMBERS</a></li>
+                <li><a href="#upcoming">UPCOMING EVENTS</a></li>
+                <li><a href="#more">MORE</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="content" id="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>Welcome to Anubhav-Drama Club</h2>
+                <p>Anubhav is the vibrant drama club dedicated to the art of performance. We provide students with opportunities to explore their acting skills, participate in plays, and showcase their talents in various events.</p>
+                <p>Join us to immerse yourself in the world of drama, connect with fellow actors, and bring stories to life in the community!</p> 
+                <p>For more details, you can contact us :<a href="http://instagram.com/anubhav_hitk" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" class="social-logo" ></a>
+                    <a href="http://facebook.com/anubhavhitkclub" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo" class="social-logo"></a>
+                </p>
+            </div>
+            <img class="about-image" src="anubhav_logo.jpg" alt="HITK Campus Logo" onclick="openModal(this.src)">
+        </div>
+    </div>
+
+    <div class="content" id="events">
+        <h2>Events</h2>
+        <div class="event-container">
+
+            <div class="event-box">
+                <div class="event-box-content">
+                    <h3>Prothoma 24</h3>
+                    <p>Prothoma at Heritage Institute of Technology on 4th October,2024</p>
+                    <img  width="180px" height="180px" src="anubhav_prothma1.jpg" alt="Event 3" onclick="openModal(this.src)">
+                </div>
+                <div class="see-more-container">
+                    <button class="see-more" onclick="toggleImages(this)">See More</button>
+                </div>
+                <div class="additional-images">
+                    <img width="180px" height="180px" src="anubhav_prothma2.jpg" alt="More Event 2"onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_prothma3.jpg" alt="More Event 2"onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_prothma4.jpg" alt="More Event 2"onclick="openModal(this.src)">
+                    
+                </div>
+            </div>
+            
+            <div class="event-box">
+                <div class="event-box-content">
+                    <h3>Anubhuti 24</h3>
+                    <p>A fest hosted by the drama club of Heritage Institute of Technology on 28-29th September,2024</p>
+                    <img width="180px" height="180px" src="anubhav_anu1.jpg" alt="Event 1" onclick="openModal(this.src)">
+                </div>
+                <div class="see-more-container">
+                    <button class="see-more" onclick="toggleImages(this)">See More</button>
+                </div>
+                <div class="additional-images">
+                    <img width="180px" height="180px" src="anubhav_anu22.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_anu11.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_anu12.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_anu13.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_anu14.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_anu15.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_anu16.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_anu8.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_anu4.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_anu10.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_anu20.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_anu21.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_anu18.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_anu19.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_anu2.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_anu3.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_anu5.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_anu6.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_anu7.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_anu23.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    
+                    
+                </div>
+            </div>  
+
+            <div class="event-box">
+                <div class="event-box-content">
+                    <h3 id="im2">Independence Day 24</h3>
+                    <p>78th Independence day celebration held at Heritage Institute of Technology</p>
+                    <img id="im1" width="180px" height="180px" src="anubhav_ind1.jpg" alt="Event 2" onclick="openModal(this.src)">
+                </div>
+                <div class="see-more-container">
+                    <button class="see-more" onclick="toggleImages(this)">See More</button>
+                </div>
+                <div class="additional-images">
+                    
+                </div>
+            </div>
+
+            <div class="event-box">
+                <div class="event-box-content">
+                    <h3>Spring Fest 24</h3>
+                    <p>1st Runnerup of the Cultural Spring fest held at IIT Kharagpur,2024</p>
+                    <img  width="180px" height="180px" src="anubhav_kgp1.jpg" alt="Event 3" onclick="openModal(this.src)">
+                </div>
+                <div class="see-more-container">
+                    <button class="see-more" onclick="toggleImages(this)">See More</button>
+                </div>
+                <div class="additional-images">
+                    <img width="180px" height="180px" src="anubhav_kgp2.jpg" alt="More Event 2"onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_kgp3.jpg" alt="More Event 2"onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_kgp4.jpg" alt="More Event 2"onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_kgp5.jpg" alt="More Event 2"onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_kgp6.jpg" alt="More Event 2"onclick="openModal(this.src)">
+                    
+                </div>
+            </div>
+
+            <div class="event-box hidden">
+                <div class="event-box-content">
+                    <h3>Heritage Utsav 2019</h3>
+                    <p>College fest held at Heritage Institute of Technology on 4-5th April,2019</p>
+                    <img width="180px" height="180px" src="anubhav_utsav1.jpg" alt="Event 5" onclick="openModal(this.src)">
+                </div>
+                <div class="see-more-container">
+                    <button class="see-more" onclick="toggleImages(this)">See More</button>
+                </div>
+                <div class="additional-images">
+                    <img width="180px" height="180px" src="anubhav_utsav8.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_utsav2.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_utsav3.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_utsav4.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_utsav5.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_utsav6.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_utsav7.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    
+                </div>
+            </div>
+
+            <div class="event-box hidden">
+                <div class="event-box-content">
+                    <h3>Street Play Competition</h3>
+                    <p>1st at Loreto College ,2018 </p>
+                    <img width="180px" height="180px" src="anubhav_sp1.jpg" alt="Event 4" onclick="openModal(this.src)">
+                </div>
+                <div class="see-more-container">
+                    <button class="see-more" onclick="toggleImages(this)">See More</button>
+                </div>
+                <div class="additional-images">
+                    <img width="180px" height="180px" src="anubhav_sp2.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_sp3.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_sp4.jpg" alt="More Event 2" onclick="openModal(this.src)">
+                    <img width="180px" height="180px" src="anubhav_sp5.jpg" alt="More Event 2" onclick="openModal(this.src)">
+            
+                </div>
+            </div>
+
+        </div>
+
+        <button class="show-more" onclick="showMoreEvents()">Show More Events</button>
+    </div>
+
+    <div class="content" id="members">
+        <h2>Members</h2>
+        <div class="members-container">
+            
+            <img class="about-image" src="anubhav_cord.jpg" alt="HITK Campus Logo" onclick="openModal(this.src)">
+        </div>
+        
+        <!-- <div class="members-box">
+            <div class="members-box-content">
+                <h3>Team members:</h3>
+                <p>Results of the selected members of resonance : <a href="reso1.pdf" target="_blank">click here</a> </p>
+                
+            </div> -->
+            
+         <!-- <div class="event-box">
+            <div class="event-box-content">
+                <h3>Alumni:</h3>
+                <p>   </p>
+                <img width="180px" height="180px" src="ghungroo_alum1.jpg" alt="Event 1" onclick="openModal(this.src)">
+            </div>
+            
+        </div>  -->
+    </div>
+
+    <div class="content" id="upcoming">
+        <h2>Upcoming events</h2>
+        
+        <p>No events.</p>
+        
+            
+        
+            
+        </div> 
+    </div>
+
+    <footer>
+        <div>
+            Heritage Institute of Technology, popularly known as HITK or HIT is a self-financed institute in the state of West Bengal. It is affiliated with Maulana Abul Kalam Azad University of Technology Kolkata.
+        </div>
+        <hr>
+        <div>   
+            &copy; 2024 HITK Campus Connect. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01" alt="Modal Image">
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal
+        var modalImg = document.getElementById("img01");
+
+        function openModal(src) {
+            modal.style.display = "block";
+            modalImg.src = src; // Set the source of the modal image
+        }
+
+        // Close the modal
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // Close the modal when clicking outside of the image
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        function toggleImages(button) {
+            const additionalImages = button.parentElement.nextElementSibling;
+            if (additionalImages.style.display === "block") {
+                additionalImages.style.display = "none";
+                button.style.display = "block"; // Show button again
+                button.textContent = "See More"; // Reset button text
+            } else {
+                additionalImages.style.display = "block"; // Show additional images
+                button.style.display = "none"; // Hide the button
+            }
+        }
+
+        function showMoreEvents() {
+            const hiddenEvents = document.querySelectorAll('.event-box.hidden');
+            hiddenEvents.forEach(event => {
+                event.classList.remove('hidden'); // Remove hidden class to show the event
+            });
+            const showMoreButton = document.querySelector('.show-more');
+            showMoreButton.style.display = "none"; // Hide the button after clicking
+        }
+    </script>
+</body>
+</html>
